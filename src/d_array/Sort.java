@@ -30,35 +30,35 @@ public class Sort {
 		shuffle(numbers); //숫자를 구하는 함수
 		System.out.println("점수: " + Arrays.toString(numbers));
 		
-		//printRank(numbers); //석차를 구하는 함수
-		//selectSort(numbers);
-		//System.out.println("정렬 후: " + Arrays.toString(numbers));
+		printRank(numbers); //석차를 구하는 함수
+		selectSort(numbers);
+		System.out.println("정렬 후: " + Arrays.toString(numbers));
 		
 		//bubleSort(numbers);
 		//System.out.println("정렬 후: " + Arrays.toString(numbers));
 		
-		insertSort(numbers); //삽입정렬
-		System.out.println("정렬 후: " + Arrays.toString(numbers));
+		//insertSort(numbers); //삽입정렬
+		//System.out.println("정렬 후: " + Arrays.toString(numbers));
 		
 		
 	}
 
 
 	private static void insertSort(int[] numbers) {
-		/*for(int i = 0; i < numbers.length; i++){
-			int key = numbers[i];
-			int j = i - 1;
-			System.out.println("j의 값: " + j);
-			while (j >= 0 && numbers[j] > key){
-				numbers[j + 1] = numbers[j];
-				j--;
-				System.out.println("정렬 중1: " + Arrays.toString(numbers)); //인덱스 2를 인덱스 1의 자리에 복사한다. (복사)
-				
+		for(int i = 1; i<numbers.length; i++){
+			int temp = numbers[i];
+			int j = 0; 
+			for(j = i - 1; j >= 0; j--){
+				if(temp<numbers[j]){
+					numbers[j + 1] = numbers[j];
+				}else{
+					break;
+				}
+			
 			}
-			numbers[j + 1] = key; 
-			System.out.println("정렬 중2: " + Arrays.toString(numbers)); //인덱스 1에 인덱스 2의 값을 넣어준다. (교환한다)
-		}*/
+			numbers[j + 1] = temp;
 		}
+	}
 		
 	
 
