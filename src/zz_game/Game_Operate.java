@@ -8,7 +8,8 @@ public class Game_Operate {
 		
 		System.out.println("------------------------------------");
 		game.intro();
-		
+		game.selectCharater();
+		game.Story();
 		
 	}
 

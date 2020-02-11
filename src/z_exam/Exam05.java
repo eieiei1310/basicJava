@@ -20,7 +20,7 @@ public class Exam05 {
 		[5-2] 다음과 같은 배열이 있을 때, arr[3].length의 값은 얼마인가?
 		//답 : 2
 		--> arr[3]은 2중 배열 arr의 인덱스 3 의 길이(length)를 뜻하므로,
-			arr[3]인 {30, 50}의 길이를 뜻한다 -> 2
+			arr[3]인 {30, 30}의 길이를 뜻한다 -> 2
 		int[][] arr = {
 		{ 5, 5, 5, 5, 5},
 		{ 10, 10, 10},
@@ -143,13 +143,13 @@ public class Exam05 {
 		[실행결과]
 		486
 		
-		//답(1): temp = ballArr[j];	//temp 는 ballArr의 j번째 인덱스를 가지고 있다.
-		 		 ballArr[j] = ballArr[i];//ballArr의 j번째 인덱스는 ballArr의 [i]번째 인덱스를 가지고 있다.
-		 		 ballArr[i] = temp; //ballArr의 i번째 인덱스는 temp값을 가지고 있다.
+		//답(1): temp = ballArr[j];	
+		 		 ballArr[j] = ballArr[i];
+		 		 ballArr[i] = temp; 
 		    답(2): 
 		    for(int i = 0; i < 3; i++){
-		    	ball3[i] = ballArr[i]' //ball3의 i번째 인덱스는 ballArr의 i번째 인덱스이다. 
-		    } //int i 는 0이고, i 가 3보다 작은 동안 {}안의 식을 실행시키고 i 를 1씩 늘려라.
+		    	ball3[i] = ballArr[i]' 
+		    } 
 		
 		
 		*[5-6] 다음은 거스름돈을 몇 개의 동전으로 지불할 수 있는지를 계산하는 문제이다. 변
