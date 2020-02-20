@@ -27,25 +27,25 @@ public class Event {
 		Game_Method.next = s.nextLine();
 		System.out.println("(system) > 그(그녀)는 온갖 영화관을 다니며 알바들을 괴롭히기로 유명한 진상 A였습니다.(엔터)");
 		Game_Method.next = s.nextLine();
-		System.out.println("진상A: 내가 왼쪽 눈에 다래끼가 나서 영화를 절반밖에 못 봤는데 영화비는 전부 다 냈어. (엔터)");
+		System.out.println("■ 진상A: 내가 왼쪽 눈에 다래끼가 나서 영화를 절반밖에 못 봤는데 영화비는 전부 다 냈어. (엔터)");
 		Game_Method.next = s.nextLine();
-		System.out.println("진상A: 빨리 절반 환불해줘. (엔터)");
+		System.out.println("■ 진상A: 빨리 절반 환불해줘. (엔터)");
 		Game_Method.next = s.nextLine();
-		System.out.println("나: 네...?? (엔터)");
+		System.out.println("□ 나: 네...?? (엔터)");
 		Game_Method.next = s.nextLine();
-		System.out.println("진상A: 빨리 환불해달라고!!!!!!! (엔터)");
+		System.out.println("■ 진상A: 빨리 환불해달라고!!!!!!! (엔터)");
 		Game_Method.next = s.nextLine();
 		System.out.println("□□□□□□□□□□□□□□□□□□□□□□□□□□□□ 미니게임 시작 □□□□□□□□□□□□□□□□□□□□□□□□□□□□");
 		Game_Method.next = s.nextLine();
 		System.out.println("(system) > 다음 문장을 똑같이 따라 치세요. 3회 실수시 실패입니다. (엔터)");
 		Game_Method.next = s.nextLine();
-		System.out.println("□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■");
 		int randomtext = ((int)(Math.random()*4)+1)-1;
-		System.out.println("□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■");
 		String correct = null;
 		int count = 3;
 		while(true){
+			System.out.println("□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■");
 			System.out.println( text[randomtext] );
+			System.out.println("□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■");
 			System.out.println("(system) 똑같이 입력하세요 (입력)>");
 			correct = s.nextLine();
 			while(correct.equals("")){
@@ -56,26 +56,27 @@ public class Event {
 				}
 			}
 			if(correct.equals(text[randomtext])){
-				System.out.println("성공하셨습니다!");
+				System.out.println("(system) 성공하셨습니다!");
 				correct = s.nextLine();
-				System.out.println("진상A: 그래, 그렇게 머리를 조아리란 말이야...(엔터)");
+				System.out.println("■ 진상A: 그래, 그렇게 머리를 조아리란 말이야...(엔터)");
 				correct = s.nextLine();
-				System.out.println("진상A: 태도가 마음에 들었어. 앞으로도 더 자주 찾아오도록 하지요.(엔터)");
+				System.out.println("■ 진상A: 태도가 마음에 들었어. 앞으로도 더 자주 찾아오도록 하지요.(엔터)");
 				correct = s.nextLine();
 				System.out.println("□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□");
 				break;
 			}
 			count--;
 			if(count == 0){
-				System.out.println("실패하셨습니다.");
+				System.out.println("(system)실패하셨습니다.");
 				correct = s.nextLine();
-				System.out.println("진상A: 뭐 이런 영화관이 다 있어? 당신, 내가 얼굴 기억해둘거야...(엔터)");
+				System.out.println("■ 진상A: 뭐 이런 영화관이 다 있어? 당신, 내가 얼굴 기억해둘거야...(엔터)");
 				correct = s.nextLine();
 				System.out.println("(system) 진상의 난동으로 인해 만족도가 50 내려갔습니다. (엔터)");
 				correct = s.nextLine();
 				Game_Method.money -= 10000;
-				System.out.println("(system) 당신은 진상에게 사비로 영화비를 환불해주었습니다. 현재 잔액:" + Game_Method.money + "(엔터)");
+				System.out.println("(system) 당신은 진상에게 사비로 영화비를 환불해주었습니다." );
 				correct = s.nextLine();
+				System.out.println("현재 잔액:" + Game_Method.money + "(엔터)");
 				System.out.println("□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□");
 				Game_Method.happyPoint -= 50;
 				break;

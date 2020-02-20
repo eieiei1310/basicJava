@@ -55,25 +55,25 @@ public class Game_Method {
 		
 		System.out.println("□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□");
 		next = s.nextLine();
-		System.out.println("나 : 오늘은 기다리던 영화관 알바 면접날...! >(엔터)");
+		System.out.println("□ 나 : 오늘은 기다리던 영화관 알바 면접날...! >(엔터)");
 		next = s.nextLine();
-		System.out.println("나 : 내 생애 처음으로 해보는 알바. 잘 해낼 수 있겠지? >(엔터)");
+		System.out.println("□ 나 : 내 생애 처음으로 해보는 알바. 잘 해낼 수 있겠지? >(엔터)");
 		next = s.nextLine();
-		System.out.println("나 : 안녕하세요... 저 오늘 면접보러 온 사람인데... >(엔터)");
+		System.out.println("□ 나 : 안녕하세요... 저 오늘 면접보러 온 사람인데... >(엔터)");
 		next = s.nextLine();
-		System.out.println("전 알바생 : 이딴 곳에서 다시는 일하나 봐라!! >(엔터)");
+		System.out.println("☞ 전 알바생 : 이딴 곳에서 다시는 일하나 봐라!! >(엔터)");
 		next = s.nextLine();
 		System.out.println("전 알바생이 분노에 차 뛰쳐나간 문을 열고 면접 장소로 들어가자,  >(엔터)");
 		next = s.nextLine();
 		System.out.println("손수건으로 땀을 닦던 사장님이 당신을 보며 환하게 웃으시며 말했습니다.   >(엔터)");
 		next = s.nextLine();
-		System.out.println("사장 : 좋아, 합격일세! >(엔터)");
+		System.out.println("■ 사장 : 좋아, 합격일세! >(엔터)");
 		next = s.nextLine();
-		System.out.println("나 : 네..? 아무것도 안했는데요?  >(엔터)");
+		System.out.println("□ 나 : 네..? 아무것도 안했는데요?  >(엔터)");
 		next = s.nextLine();
-		System.out.println("사장 : 괜찮아 괜찮아, 하다 보면 다~~~~익숙해지게 되어 있으니까! >(엔터)");
+		System.out.println("■ 사장 : 괜찮아 괜찮아, 하다 보면 다~~~~익숙해지게 되어 있으니까! >(엔터)");
 		next = s.nextLine();
-		System.out.println("나 : 네... >(엔터)");
+		System.out.println("□ 나 : 네... >(엔터)");
 		next = s.nextLine();
 		System.out.println("그렇게 나는 오늘부터 이상한 영화관의 알바를 시작하게 되었다. >(엔터)");
 		next = s.nextLine();
@@ -139,14 +139,14 @@ public class Game_Method {
 		Ending e = new Ending();
 		
 		Scanner s = new Scanner(System.in);
-		outer: for(int i = 0; i < 10; i++){
+		outer: for(int i = 0; i < 5; i++){
 			System.out.println("□□□□□□□□□□□□□□□□□□□□□□□□□□□□ 알바 [" + (i + 1)+ "] 일차 □□□□□□□□□□□□□□□□□□□□□□□□□□□□");
 			next = s.nextLine();
 			
 			
 	
 			//임시 시험 버전
-			for(int j = 0; j < 5; j++){
+			for(int j = 0; j < 3; j++){
 			System.out.println("□□□□□□□□□□□□□□□□□□□□□□□□□□□□  " +(j + 1) + " 번째 손님   □□□□□□□□□□□□□□□□□□□□□□□□□□□□");
 			System.out.println(" ");
 				if(custombag[j].equals(a1)){
@@ -186,29 +186,30 @@ public class Game_Method {
 			
 			int daily = (int)(Math.random()*100) + 1;
 			int jinsang =  (int)(Math.random()*100) + jinsangPoint;
-			if(daily > jinsang){
+			if(daily < jinsang){
 				event.jinsangEvent1();
 			}
 			
 			
-			if(happyPoint <= -100){
+			if(happyPoint <= -120){
 				e.bedEnding();
 				 break outer;
-			}else if(happyPoint >= 100){
+			}else if(happyPoint >= 120){
 				e.goodEnding();
 				break outer;
 			}
 			//알바비 이벤트
-			System.out.println("(system) 오늘 알바비 " + (succes * 2000) + "원이 입금되었습니다. ");
-			money += succes * 2000;
-			if(succes <= 3){
-				System.out.println("나\t: 알바비가 왜 이것밖에 안돼요? ");
+			System.out.println("(system) 오늘 알바비 " + (succes * 1500) + "원이 입금되었습니다. ");
+			money += succes * 1500;
+			if(succes <= 4){
 				next = s.nextLine();
-				System.out.println("나\t: 최저임금도 안되잖아요. ");
+				System.out.println("□ 나      : 알바비가 왜 이것밖에 안돼요? ");
 				next = s.nextLine();
-				System.out.println("사장님 : 그럼 일을 잘했어야지. 나 집에 가야 하니까 말 걸지 마!! ");
+				System.out.println("□ 나      : 최저임금도 안되잖아요. ");
+				next = s.nextLine();  
+				System.out.println("■ 사장님: 그럼 일을 잘했어야지. 나 집에 가야 하니까 말 걸지 마!! ");
 				next = s.nextLine();
-				System.out.println("나\t:...");
+				System.out.println("□ 나      :...");
 				next = s.nextLine();
 			}
 			//알바비 엔딩
@@ -290,13 +291,14 @@ public class Game_Method {
 				}else if((moviebag[Integer.parseInt(movieSelect)-1].movieNum )+1 == (custombag[temp1]).customerNumber){
 						a.goodAnwer();
 						happyPoint += 20;
-						System.out.println("만족도가 20 증가하였습니다. 현재 만족도 :" + happyPoint);
+						select = s.nextLine();
+						System.out.println("(system) 만족도가 20 증가하였습니다. 현재 만족도 :" + happyPoint);
 						select = s.nextLine();
 						succes ++;
 				}else{
 					a.bedAnwer();
 					happyPoint -= 30;
-					System.out.println("만족도가 30 감소하였습니다. 현재 만족도 :" + happyPoint);
+					System.out.println("(system) 만족도가 30 감소하였습니다. 현재 만족도 :" + happyPoint);
 					select = s.nextLine();}
 				}
 			
@@ -304,6 +306,7 @@ public class Game_Method {
 			a.angryAnwer();
 			jinsangPoint += 20;
 			System.out.println("(system) 왜인지 알 수 없는 불길한 예감이 듭니다...");
+			select = s.nextLine();
 			happyPoint -= 30;
 			System.out.println("(system) 만족도가 30 감소하였습니다. 현재 만족도 :" + happyPoint);
 			select = s.nextLine();}

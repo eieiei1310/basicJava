@@ -11,10 +11,10 @@ public class Game_Operator {
 		
 		Scanner sc = new Scanner(System.in);
 		Game_Method method = new Game_Method();
-		System.out.println("인트로를 스킵하시겠습니까? (입력)>");
+		System.out.println("(system) 인트로를 스킵하시겠습니까? (입력)>");
 		answer = s.nextLine();
 		if(answer.equals("y") || answer.equals("Y") || answer.equals("ㅛ") ){
-			System.out.println("인트로를 스킵하였습니다.");
+			System.out.println("(system) 인트로를 스킵하였습니다.");
 		}else{
 			method.intro();
 		}
