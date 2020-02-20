@@ -13,8 +13,8 @@ public class Game_Method {
 		int start = 0; //시작
 		int lovePoint = 0; //호감도
 		int secreatPoint = 0;//비밀 이벤트 홤도
-		String select;
-		int selectNum;
+		String select; //선택
+		int selectNum; //선택 번호
 		
 		private Integer integer;
 		void intro(){
@@ -157,19 +157,18 @@ public class Game_Method {
 			System.out.println("(System) 1, 2, 3 중 하나를 선택해주세요 >(번호 입력)");
 			selectCharater = s.nextLine();
 			while(true){
-			while(selectCharater.equals("")){
-				System.out.println("깔끔한 정장 원피스 차림이 어른스러운 분위기를 준다. >(엔터)");
-				selectCharater = s.nextLine();
-				}
-			while(selectCharater != "1" && selectCharater != "2" && selectCharater != "3"){
-				System.out.println("(System) 1, 2, 3 중 하나를 선택해주세요 >(번호 입력)");
-				selectCharater = s.nextLine();
-				if(selectCharater == "1" || selectCharater == "2" || selectCharater == "3"){
+				while(selectCharater.equals("")){
+					System.out.println("(System) 1, 2, 3 중 하나를 선택해주세요 >(번호 입력)");
+					selectCharater = s.nextLine();
+					}
+				while(selectCharater.equals("1") && selectCharater.equals("2") && selectCharater.equals("3")){
+					System.out.println("(System) 1, 2, 3 중 하나를 선택해주세요 >(번호 입력)");
+					selectCharater = s.nextLine();
+					}
+				if(selectCharater.equals("1") || selectCharater.equals("2") || selectCharater.equals("3")){
 					break;
 					}
 				}
-				break;
-			}
 			selectCharaterNum = integer.parseInt(selectCharater);
 			System.out.println( femalCharater[selectCharaterNum - 1]+ "을(를) 선택하셨습니다.");
 		}
@@ -419,7 +418,7 @@ public class Game_Method {
 				next = s.nextLine();
 				System.out.println(name + ": 원래 이정도까진 아닌데... 오늘 좀 심하네요. >(엔터)");
 				next = s.nextLine();
-				System.out.println(malCharater[selectCharaterNum - 1] + ":" + name + "아, 정말 미안해.. >(엔터)");
+				System.out.println(malCharater[selectCharaterNum - 1] + ":" + name + "아(야), 정말 미안해.. >(엔터)");
 				next = s.nextLine();
 				System.out.println(malCharater[selectCharaterNum - 1] + ": 알레르기가 있을 수도 있다는 걸 생각했어야 했는데. 다 내 잘못이야.>(엔터)");
 				next = s.nextLine();
@@ -608,15 +607,17 @@ public class Game_Method {
 				next = s.nextLine();
 				System.out.println("(System)선배는 조용히 자신의 비밀에 대해 털어놓았습니다.");
 				next = s.nextLine();
-				System.out.println("(System)선배의 어머니께서 선배가 어렸을 때 돌아가셨는데, 마지막으로 잡아주셨던 어머니의 차가운 손이 ");
+				System.out.println("(System)선배의 어머니께서 선배가 어렸을 때 돌아가셨다고 합니다. ");
 				next = s.nextLine();
-				System.out.println("(System)선배에게 트라우마가 되어 타인의 손을 잡지 못하게 되었다는 이야기였습니다.");
+				System.out.println("(System)오랜 투병 끝에 돌아가신 어머니께서 마지막으로 잡아주셨던 차가운 손이 ");
+				next = s.nextLine();
+				System.out.println("(System)선배에게 트라우마가 되어 타인의 손을 잡지 못하게 되었다는 것이었습니다.");
 				next = s.nextLine();
 				System.out.println(name + ":남에게 하기 쉽지 않은 이야기였을 텐데.. 이런 이야기를 하게 해서 죄송해요.");
 				next = s.nextLine();
 				System.out.println(malCharater[selectCharaterNum - 1] + ":아니야. 애초에 내가 장갑을 떨어뜨려서 그런 거기도 했고. ");
 				next = s.nextLine();
-				System.out.println(malCharater[selectCharaterNum - 1] + ":너에게는 해도 괜찮을 것 같았어. ");
+				System.out.println(malCharater[selectCharaterNum - 1] + ":왠지 너에게는 해도 괜찮을 것 같았어. ");
 				next = s.nextLine();
 				lovePoint += 100;
 				secreatPoint += 100;
@@ -1757,7 +1758,7 @@ public class Game_Method {
 				next = s.nextLine();
 				System.out.println("(System)C는 조용히 당신에게 귓속말합니다. >(엔터)");
 				next = s.nextLine();
-				System.out.println(femalCharater[selectCharaterNum - 1] +":" + name + " 아, 네가 아니였으면 내가 말했을 거야. 고마워.(엔터)");
+				System.out.println(femalCharater[selectCharaterNum - 1] +":" + name + " 아(야), 네가 아니였으면 내가 말했을 거야. 고마워.(엔터)");
 				next = s.nextLine();
 				lovePoint += 30;
 				System.out.println("(System)C의 호감도가 30 올라갑니다. 현재 호감도: " + lovePoint +" 점>(엔터)");
@@ -2128,9 +2129,9 @@ public class Game_Method {
 				System.out.println("(System)그럼에도 당신과 C는 서로를 위하고 있습니다.(엔터)");
 				next = s.nextLine();
 			}
-			System.out.println("(System) 당신은 FIND MY LOVE 에서 당신의 짝을 찾았습니다. >(엔터)");
+			System.out.println("(System)당신은 FIND MY LOVE 에서 당신의 짝을 찾았습니다. >(엔터)");
 			next = s.nextLine();
-			System.out.println("(System) 축하드립니다!! >(엔터)");
+			System.out.println("(System)축하드립니다!! >(엔터)");
 			next = s.nextLine();
 			System.out.println("System)---------------HAPPY ENDING--------------->(엔터)");
 			next = s.nextLine();
@@ -2146,9 +2147,9 @@ public class Game_Method {
 			next = s.nextLine();
 			System.out.println("상대로 부터 어떤 호감도 얻어낼 수 없게 되었습니다. ");
 			next = s.nextLine();
-			System.out.println("(System) 안타깝게도 당신은 FIND MY LOVE 에서 당신의 짝을 찾지 못했습니다. >(엔터)");
+			System.out.println("(System)안타깝게도 당신은 FIND MY LOVE 에서 당신의 짝을 찾지 못했습니다. >(엔터)");
 			next = s.nextLine();
-			System.out.println("System)---------------BED ENDING--------------->(엔터)");
+			System.out.println("(System)---------------BED ENDING--------------->(엔터)");
 			next = s.nextLine();
 			for(int i = 0; i < 10; i++){
 				System.out.println("-------------------------------------");
@@ -2162,7 +2163,7 @@ public class Game_Method {
 			next = s.nextLine();
 			System.out.println("상대로 부터 딱히 연애감정을 이끌어낼 수는 없었습니다. ");
 			next = s.nextLine();
-			System.out.println("(System) 안타깝게도 당신은 FIND MY LOVE 에서 당신의 짝을 찾지 못했습니다. >(엔터)");
+			System.out.println("(System)안타깝게도 당신은 FIND MY LOVE 에서 당신의 짝을 찾지 못했습니다. >(엔터)");
 			next = s.nextLine();
 			System.out.println("(System)---------------NORMAL ENDING--------------->(엔터)");
 			next = s.nextLine();
@@ -2171,9 +2172,5 @@ public class Game_Method {
 		}
 		}
 		
-		
-		void ahint(){}
-		void bhint(){}
-		void chint(){}
 	
 }
