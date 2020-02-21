@@ -46,6 +46,7 @@ public class Event {
 			System.out.println("□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■");
 			System.out.println( text[randomtext] );
 			System.out.println("□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■□■");
+			Game_Method.next = s.nextLine();
 			System.out.println("(system) 똑같이 입력하세요 (입력)>");
 			correct = s.nextLine();
 			while(correct.equals("")){
@@ -67,14 +68,14 @@ public class Event {
 			}
 			count--;
 			if(count == 0){
-				System.out.println("(system)실패하셨습니다.");
+				System.out.println("(system) 실패하셨습니다.");
 				correct = s.nextLine();
 				System.out.println("■ 진상A: 뭐 이런 영화관이 다 있어? 당신, 내가 얼굴 기억해둘거야...(엔터)");
 				correct = s.nextLine();
 				System.out.println("(system) 진상의 난동으로 인해 만족도가 50 내려갔습니다. (엔터)");
 				correct = s.nextLine();
 				Game_Method.money -= 10000;
-				System.out.println("(system) 당신은 진상에게 사비로 영화비를 환불해주었습니다." );
+				System.out.println("(system) 당신은 진상에게 사비로 영화비(10000원)를 환불해주었습니다." );
 				correct = s.nextLine();
 				System.out.println("현재 잔액:" + Game_Method.money + "(엔터)");
 				System.out.println("□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□");

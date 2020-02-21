@@ -66,7 +66,7 @@ class movie7 extends Game_movie{
 class movie8 extends Game_movie{
 	movie8(){
 		super("죽은시인의사회",7);
-		info = "여러 번의 해결되지 않은 미제 연쇄살인사건.. 그 모든 사건의 뒤에는 한 시인이 존재하는데..?";
+		info = "여러 번의 해결되지 않은 미제 연쇄살인사건.. 모든 사건의 뒤에는 한 시인이?";
 	}
 	
 }

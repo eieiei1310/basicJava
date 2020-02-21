@@ -65,7 +65,7 @@ public class Game_Method {
 		next = s.nextLine();
 		System.out.println("전 알바생이 분노에 차 뛰쳐나간 문을 열고 면접 장소로 들어가자,  >(엔터)");
 		next = s.nextLine();
-		System.out.println("손수건으로 땀을 닦던 사장님이 당신을 보며 환하게 웃으시며 말했습니다.   >(엔터)");
+		System.out.println("사장님이 당신에게 환하게 웃으며 말했습니다.   >(엔터)");
 		next = s.nextLine();
 		System.out.println("■ 사장 : 좋아, 합격일세! >(엔터)");
 		next = s.nextLine();
@@ -75,9 +75,9 @@ public class Game_Method {
 		next = s.nextLine();
 		System.out.println("□ 나 : 네... >(엔터)");
 		next = s.nextLine();
-		System.out.println("그렇게 나는 오늘부터 이상한 영화관의 알바를 시작하게 되었다. >(엔터)");
+		System.out.println("그렇게 당신은 오늘부터 이상한 영화관의 알바를 시작하게 되었습니다. >(엔터)");
 		next = s.nextLine();
-		System.out.println("뭔가 잘못된 것 같은 느낌이 들지만... 그래도 열심히 해봐야지! >(엔터)");
+		System.out.println("□ 나 : 뭔가 잘못된 것 같은 느낌이 들지만... 그래도 열심히 해봐야지! >(엔터)");
 		next = s.nextLine();
 		
 		for(int i = 0; i< 10; i ++){
@@ -90,64 +90,68 @@ public class Game_Method {
 	}
 	void day(){
 		
-		//숫자 랜덤 섞기
-		for(int d = 0; d<9; d++){
-			count = (int)(Math.random()*10);
-			int temp = 0;
-			temp = CountBox[count];
-			CountBox[count] = CountBox[d];
-			CountBox[d] = temp;
-		}
-		//손님 바구니/영화 바구니에 손님/영화 넣기
-		for(int q = 0; q < custombag.length; q++){
-			
-			if(CountBox[q] == 1 ){
-				custombag[q] = a1;
-				moviebag[q] = m1;
-			}else if(CountBox[q]  == 2){
-				custombag[q] = a2;
-				moviebag[q] = m2;
-			}else if(CountBox[q]  == 3){
-				custombag[q] = a3;
-				moviebag[q] = m3;
-			}else if(CountBox[q]  == 4){
-				custombag[q] = a4;
-				moviebag[q] = m4;
-			}else if(CountBox[q]  == 5){
-				custombag[q] = a5;
-				moviebag[q] = m5;
-			}else if(CountBox[q]  == 6){
-				custombag[q] = a6;
-				moviebag[q] = m6;
-			}else if(CountBox[q]  == 7){
-				custombag[q] = a7;
-				moviebag[q] = m7;
-			}else if(CountBox[q]  == 8){
-				custombag[q] = a8;
-				moviebag[q] = m8;
-			}else if(CountBox[q]  == 9){
-				custombag[q] = a9;
-				moviebag[q] = m9;
-			}else if(CountBox[q]  == 10){
-				custombag[q] = a10;
-				moviebag[q] = m10;
-			}
-			
-		}
+		
 		
 		//엔딩 객체
 		Ending e = new Ending();
 		
 		Scanner s = new Scanner(System.in);
-		outer: for(int i = 0; i < 5; i++){
+		outer: for(int i = 0; i < 3; i++){
 			System.out.println("□□□□□□□□□□□□□□□□□□□□□□□□□□□□ 알바 [" + (i + 1)+ "] 일차 □□□□□□□□□□□□□□□□□□□□□□□□□□□□");
 			next = s.nextLine();
+			
+			
+			//숫자 랜덤 섞기
+			for(int d = 0; d<9; d++){
+				count = (int)(Math.random()*10);
+				int temp = 0;
+				temp = CountBox[count];
+				CountBox[count] = CountBox[d];
+				CountBox[d] = temp;
+			}
+			//손님 바구니/영화 바구니에 손님/영화 넣기
+			for(int q = 0; q < custombag.length; q++){
+				
+				if(CountBox[q] == 1 ){
+					custombag[q] = a1;
+					moviebag[q] = m1;
+				}else if(CountBox[q]  == 2){
+					custombag[q] = a2;
+					moviebag[q] = m2;
+				}else if(CountBox[q]  == 3){
+					custombag[q] = a3;
+					moviebag[q] = m3;
+				}else if(CountBox[q]  == 4){
+					custombag[q] = a4;
+					moviebag[q] = m4;
+				}else if(CountBox[q]  == 5){
+					custombag[q] = a5;
+					moviebag[q] = m5;
+				}else if(CountBox[q]  == 6){
+					custombag[q] = a6;
+					moviebag[q] = m6;
+				}else if(CountBox[q]  == 7){
+					custombag[q] = a7;
+					moviebag[q] = m7;
+				}else if(CountBox[q]  == 8){
+					custombag[q] = a8;
+					moviebag[q] = m8;
+				}else if(CountBox[q]  == 9){
+					custombag[q] = a9;
+					moviebag[q] = m9;
+				}else if(CountBox[q]  == 10){
+					custombag[q] = a10;
+					moviebag[q] = m10;
+				}
+				
+			}
+			
 			
 			
 	
 			//임시 시험 버전
 			for(int j = 0; j < 3; j++){
-			System.out.println("□□□□□□□□□□□□□□□□□□□□□□□□□□□□  " +(j + 1) + " 번째 손님   □□□□□□□□□□□□□□□□□□□□□□□□□□□□");
+			System.out.println("□□□□□□□□□□□□□□□□□□□□□□□□□□□□ [" +(j + 1) + "] 번째 손님  □□□□□□□□□□□□□□□□□□□□□□□□□□□□");
 			System.out.println(" ");
 				if(custombag[j].equals(a1)){
 					temp1 = j;
@@ -191,10 +195,10 @@ public class Game_Method {
 			}
 			
 			
-			if(happyPoint <= -120){
+			if(happyPoint <= -150){
 				e.bedEnding();
 				 break outer;
-			}else if(happyPoint >= 120){
+			}else if(happyPoint >= 100){
 				e.goodEnding();
 				break outer;
 			}
@@ -211,6 +215,7 @@ public class Game_Method {
 				next = s.nextLine();
 				System.out.println("□ 나      :...");
 				next = s.nextLine();
+				succes = 1;
 			}
 			//알바비 엔딩
 			if(money < 0){
@@ -219,8 +224,8 @@ public class Game_Method {
 			}
 			
 		}
-		succes = 1;
-		if(happyPoint >= 100){
+		
+		if(happyPoint <= 100 && happyPoint > -150 && money > 0){
 			e.normalEnding();
 		}
 	}
